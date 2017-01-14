@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/driverChat"
+        android:icon="@drawable/chat_new"
+        android:showAsAction="always"
+        android:title="Chat"/>
+    <item
+        android:id="@+id/bookStatus"
+        android:icon="@drawable/book"
+        android:showAsAction="always"
+        android:title="Book"/>
+    <item
+        android:id="@+id/driverPooledJobListMenu"
+        android:icon="@drawable/ic_action_collections_view_as_list"
+        android:showAsAction="always"
+        android:title="Pooled Job List"/>
+    <item
+        android:id="@+id/driverMap"
+        android:icon="@android:drawable/ic_menu_mylocation"
+        android:showAsAction="always"
+        android:title="Refresh"/>
+    <item
+        android:id="@+id/driverStatus"
+        android:icon="@drawable/green_dot"
+        android:showAsAction="always"
+        android:title="Status"/>
+    <item
+        android:id="@+id/driverLogoutMenu"
+        android:icon="@drawable/ic_action_logout"
+        android:showAsAction="always"
+        android:title="Logout"/>
+
+</menu>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/userProfileMenu"
+        android:icon="@drawable/ic_action_content_edit"
+        android:showAsAction="always"
+        android:title="Edit Profile"/>
+    <item
+        android:id="@+id/userbookmenu"
+        android:icon="@drawable/book"
+        android:showAsAction="always"
+        android:title="Book"/>
+    <item
+        android:id="@+id/userRidesMenu"
+        android:icon="@drawable/ic_action_collections_view_as_list"
+        android:showAsAction="always"
+        android:title="My Rides"/>
+    <item
+        android:id="@+id/userMap"
+        android:icon="@android:drawable/ic_menu_mylocation"
+        android:showAsAction="always"
+        android:title="Refresh"/>
+    <item
+        android:id="@+id/useroutmneu"
+        android:icon="@drawable/ic_action_logout"
+        android:showAsAction="always"
+        android:title="Log Out"/>
+
+</menu>

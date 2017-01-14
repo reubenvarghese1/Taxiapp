@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.log.cyclone"
+    android:versionCode="36"
+    android:versionName="0.36" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <permission
+        android:name="com.log.cyclone.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.log.cyclone.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- <android:uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        name="com.log.cyclone.util.MyApplication"
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.log.cyclone.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.log.cyclone.LoginActivity" />
+        <activity android:name="com.log.cyclone.DriverPositionActivity" />
+        <activity android:name="com.log.cyclone.DriverActivity" />
+        <activity android:name="com.log.cyclone.RequestedUserActivity" />
+        <activity android:name="com.log.cyclone.UserRequestActivity" />
+        <activity android:name="com.log.cyclone.UserRequestDetailsActivity" />
+        <activity android:name="com.log.cyclone.UserEditProfileActivity" />
+        <activity android:name="com.log.cyclone.DriverTrackActivity" />
+        <activity android:name="com.log.cyclone.ChatActivity" />
+        <activity android:name="com.log.cyclone.BookNowDriverActivity" />
+        <activity android:name="com.log.cyclone.DriverMapActivity" />
+        <activity android:name="com.log.cyclone.BookNowUserActivity" >
+        </activity>
+
+        <receiver android:name="com.log.cyclone.UpdateReceiver" />
+
+        <!--
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDt4hHjDxPXRGeGtukPl_ZQ3HR8WNiMWo0" />
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDt4hHjDxPXRGeGtukPl_ZQ3HR8WNiMWo0" />
+        <!--
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDtG9a-k9SfV4kIfQnyheS_P2WrCRDwc70" />
+        
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        -->
+    </application>
+
+</manifest>

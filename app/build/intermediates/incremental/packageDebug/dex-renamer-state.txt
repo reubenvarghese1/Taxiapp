@@ -1,0 +1,7 @@
+#Sun Jan 15 03:36:04 IST 2017
+base.0=/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a94adf8425155b6502c8517e204544077290cf6e
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d216cd18d05d2f32b986db1b66e36b350765faaa/classes.dex
+base.1=/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d216cd18d05d2f32b986db1b66e36b350765faaa
+file.0=/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a94adf8425155b6502c8517e204544077290cf6e/classes.dex

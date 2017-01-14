@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right" >
+
+            <TextView
+                android:id="@+id/driverTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/round_blue_button"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:text="Drivers"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.5"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/headerTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="4dp"
+                android:text="Login"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!--
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="48dp"
+            android:layout_marginTop="48dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@android:color/transparent" >
+
+            <RadioGroup
+                android:id="@+id/rg_steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rdo_step1"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/rdo_step"
+                    android:button="@null"
+                    android:checked="true"
+                    android:enabled="false" />
+
+                <RadioButton
+                    android:id="@+id/rdo_step2"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/rdo_step"
+                    android:button="@null"
+                    android:enabled="false" />
+
+                <RadioButton
+                    android:id="@+id/rdo_step3"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/rdo_step"
+                    android:button="@null"
+                    android:enabled="false" />
+            </RadioGroup>
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/loginViewParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/emailText"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/round_edit"
+                    android:gravity="center"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#007aff"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/passwordText"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_edit"
+                    android:gravity="center"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="#007aff"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/btn_signup"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/round_blue_button"
+                        android:gravity="center"
+                        android:text="SIGN UP"
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/btn_login"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/round_blue_button"
+                        android:gravity="center"
+                        android:text="LOGIN"
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/driverloginViewParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/loginEmailText"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/round_edit"
+                    android:gravity="center"
+                    android:hint="Driver E-mail"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#007aff"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/loginPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_edit"
+                    android:gravity="center"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="#007aff"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/loginCancelButton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/round_blue_button"
+                        android:gravity="center"
+                        android:text="CANCEL"
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/loginSubmitButton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/round_blue_button"
+                        android:gravity="center"
+                        android:text="LOGIN"
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signUpViewParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/registrationName"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/round_edit"
+                    android:gravity="center"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:textColor="#007aff"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/registrationEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_edit"
+                    android:gravity="center"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#007aff"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/registrationPhnNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_edit"
+                    android:gravity="center"
+                    android:hint="Mobile Number"
+                    android:inputType="number"
+                    android:textColor="#007aff"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/registrationPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_edit"
+                    android:gravity="center"
+                    android:hint="Pasword"
+                    android:inputType="textPassword"
+                    android:textColor="#007aff"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/registrationConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_edit"
+                    android:gravity="center"
+                    android:hint="Confirm Pasword"
+                    android:inputType="textPassword"
+                    android:textColor="#007aff"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/registerCancelButton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/round_blue_button"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/registerSubmitBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/round_blue_button"
+                        android:gravity="center"
+                        android:text="Submit"
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/registrationResultText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="#AD1400"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/loginForgotPassBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Forgot password? "
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="|"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

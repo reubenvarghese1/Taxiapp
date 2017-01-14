@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="New Customer Request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:hint="Customer's name"
+                >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/phoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:hint="Customer's phone number"
+                android:layout_marginTop="10dp">
+
+                <requestFocus />
+            </EditText>
+
+            <AutoCompleteTextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/autoAddress"
+                android:hint="Pickup Address" />
+
+            <AutoCompleteTextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/autoDestination"
+                android:hint="Destination Address" />
+
+            <EditText
+                android:id="@+id/editNumPassengers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="sans-serif-light"
+                android:hint="Number of passengers"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp">
+            </EditText>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spVehicle"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/tvBookingTime"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Booking Date/Time"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                >
+
+                <Button
+                    android:id="@+id/setDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Set Date"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:onClick="showDatePickerDialog" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spHour"
+                    android:layout_toRightOf="@+id/setDate"
+                    android:layout_marginLeft="20dp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spMin"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/spHour" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                >
+
+                <Button
+                    android:background="@drawable/my_button"
+                    android:id="@+id/editRequestReject"
+
+                    android:layout_margin="1dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Reject"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <Button
+                    android:background="@drawable/my_button"
+                    android:id="@+id/editRequestAccept"
+                    android:layout_width="0dp"
+                    android:layout_margin="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal"
+                    android:text="Accept" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/newReqResultText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:textColor="#AD1400"
+                android:gravity="center"
+                android:text=""
+                android:visibility="gone"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
