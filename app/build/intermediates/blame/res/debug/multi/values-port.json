@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+        "outputFile": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-port/values-port.xml",
+                    "file": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-port/values-port.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

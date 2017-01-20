@@ -112,6 +112,7 @@ public class DriverPositionActivity extends Activity implements OnMarkerClickLis
     String driverEmail;
     float distance;
     double pickupLatitude, pickupLongitude;
+    Button plotw;
 
     long lastnotifytime;
 
@@ -136,7 +137,8 @@ public class DriverPositionActivity extends Activity implements OnMarkerClickLis
         gps = new GPSTracker(this);
         con = DriverPositionActivity.this;
         spchBtn = (Button) findViewById(R.id.speechBtn);
-
+        plotw=(Button)findViewById(R.id.plot);
+        plotw.setVisibility(View.GONE);
         if (!Util.isGPSOn(this)) {
             GPSTracker.showSettingsAlert(this);
         }

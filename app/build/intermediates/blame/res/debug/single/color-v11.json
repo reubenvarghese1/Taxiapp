@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     }
 ]

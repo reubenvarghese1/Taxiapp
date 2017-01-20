@@ -92,6 +92,7 @@ public class MainActivity extends FragmentActivity {
         passwordText = (EditText) findViewById(R.id.passwordText);
         emailText = (EditText) findViewById(R.id.emailText);
         driverTxt = (TextView) findViewById(R.id.driverTxt);
+        driverTxt.setVisibility(View.GONE);
         headerTxt = (TextView) findViewById(R.id.headerTxt);
         btn_login = (TextView) findViewById(R.id.btn_login);
         btn_signup = (TextView) findViewById(R.id.btn_signup);
@@ -137,8 +138,8 @@ public class MainActivity extends FragmentActivity {
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
                 if (!TextUtils.isEmpty(drloginEmail.getText().toString()) && !TextUtils.isEmpty(drloginPassword.getText().toString())) {
-                    Login login = new Login();
-                    login.execute("driver");
+                    Login1 login = new Login1();
+                    login.execute1("driver");
                 } else {
                     Toast.makeText(con, "Please enter value", Toast.LENGTH_SHORT).show();
                 }
@@ -172,8 +173,8 @@ public class MainActivity extends FragmentActivity {
                 headerTxt.setText("Login");
                 signUpViewParent.setVisibility(View.GONE);
                 loginViewParent.setVisibility(View.VISIBLE);
-                driverloginViewParent.setVisibility(View.GONE);
-                driverTxt.setVisibility(View.VISIBLE);
+                //driverloginViewParent.setVisibility(View.GONE);
+                //driverTxt.setVisibility(View.VISIBLE);
                 //signIn();
             }
         });
@@ -199,6 +200,7 @@ public class MainActivity extends FragmentActivity {
                 driverloginViewParent.setVisibility(View.GONE);
             }
         });
+        //check this if need be
         loginSubmitBtn.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -241,12 +243,12 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
-                //showDriverLoginDialog();
+                showDriverLoginDialog();
                 headerTxt.setText("Driver Login");
                 signUpViewParent.setVisibility(View.GONE);
-                loginViewParent.setVisibility(View.GONE);
-                driverloginViewParent.setVisibility(View.VISIBLE);
-                driverTxt.setVisibility(View.INVISIBLE);
+                //loginViewParent.setVisibility(View.GONE);
+                //driverloginViewParent.setVisibility(View.VISIBLE);
+                //driverTxt.setVisibility(View.INVISIBLE);
             }
         });
         initialize();
@@ -271,8 +273,8 @@ public class MainActivity extends FragmentActivity {
             public void onClick(View arg0) {
 
                 if (!TextUtils.isEmpty(drloginEmail.getText().toString()) && !TextUtils.isEmpty(drloginPassword.getText().toString())) {
-                    Login login = new Login();
-                    login.execute("driver");
+                    Login1 login = new Login1();
+                    login.execute1("driver");
                 } else {
                     Toast.makeText(con, "Please enter value", Toast.LENGTH_SHORT).show();
                 }
@@ -326,8 +328,8 @@ public class MainActivity extends FragmentActivity {
 
     public void signInDriver() {
         if (!TextUtils.isEmpty(drloginEmail.getText().toString()) && !TextUtils.isEmpty(drloginPassword.getText().toString())) {
-            Login login = new Login();
-            login.execute("driver");
+            Login1 login1 = new Login1();
+            login1.execute1("driver");
         } else {
             Toast.makeText(con, "Please enter value", Toast.LENGTH_SHORT).show();
         }
@@ -531,7 +533,7 @@ public class MainActivity extends FragmentActivity {
     private void signIn() {
         if (!TextUtils.isEmpty(emailText.getText().toString())) {
             if (!TextUtils.isEmpty(passwordText.getText().toString())) {
-                new Login().execute("client");
+                new Login().execute();
             } else Toast.makeText(this, "Please enter your password", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Please enter your email address", Toast.LENGTH_SHORT).show();
@@ -555,7 +557,7 @@ public class MainActivity extends FragmentActivity {
         finish();*/
     }
 
-    class Login {
+    class Login1 {
         ProgressDialog pDialog;
         String s = "";
         int success = -1;
@@ -565,7 +567,7 @@ public class MainActivity extends FragmentActivity {
         String password = "";
         int group_id;
 
-        public Login() {
+        public Login1() {
             pDialog = new ProgressDialog(con);
             pDialog.setMessage("Login is processing......");
             pDialog.setIndeterminate(false);
@@ -573,7 +575,7 @@ public class MainActivity extends FragmentActivity {
             pDialog.show();
         }
 
-        public void execute(String... st) {
+        public void execute1(String... st) {
             if (st != null && st[0].equals("driver")) {
                 email = drloginEmail.getText().toString();
                 password = drloginPassword.getText().toString();
@@ -635,6 +637,114 @@ public class MainActivity extends FragmentActivity {
                             Intent i = new Intent(con, DriverPositionActivity.class);
                             if (driver)
                                 i = new Intent(con, DriverMapActivity.class);
+                            startActivity(i);
+                            Toast.makeText(con, s, Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+
+                    } catch (JSONException e) {
+                        //	e.printStackTrace();
+                        error = 1;
+                    } catch (Exception e) {
+                        error = 1;
+                    }
+                }
+            });
+        }
+    }
+
+
+    class Login {
+        ProgressDialog pDialog;
+        String s = "";
+        int success = -1;
+        int error = 0;
+        boolean driver = false;
+        String email = "";
+        String password = "";
+        int group_id;
+        String categoryofp;
+
+        public Login() {
+            pDialog = new ProgressDialog(con);
+            pDialog.setMessage("Login is processing......");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
+            pDialog.show();
+        }
+
+        public void execute() {
+            /*if (st != null && st[0].equals("driver")) {
+                email = drloginEmail.getText().toString();
+                password = drloginPassword.getText().toString();
+                driver = true;
+            } else {*/
+                email = emailText.getText().toString();
+                password = passwordText.getText().toString();
+            //}
+
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("email", email));
+            params.add(new BasicNameValuePair("password", password));
+
+          /*  if (driver) params.add(new BasicNameValuePair("category", "driver"));
+            else params.add(new BasicNameValuePair("category", "client"));*/
+
+            UserInfo.setEmail(email);
+            UserInfo.setPassword(password);
+
+
+            jparser.makeHttpRequest(Globals.loginURL, "POST", params, new ServerCallback() {
+                @Override
+                public void onSuccess(JSONObject jsonObject) {
+                    try {
+                        success = jsonObject.getInt("success");
+                        s = jsonObject.getString("message");
+
+                        if (success == 1) {
+                            JSONObject job = jsonObject.getJSONArray("info").getJSONObject(0);
+                            UserInfo.setName(job.getString("name"));
+                            UserInfo.setPhonenumber(job.getString("number"));
+                            UserInfo.setId(job.getString("id"));
+                            group_id = job.getInt("group_id");
+                            categoryofp=job.getString("category");
+                            if (categoryofp.equals("driver")){
+                                driver=true;
+                            }
+                            else{
+                                driver=false;
+                            }
+                        }
+
+                        pDialog.dismiss();
+
+                        if (error == 1) {
+                            if (Util.isConnectingToInternet(con)) {
+                                Toast.makeText(con, "Server is down, Please try again later", Toast.LENGTH_SHORT).show();
+                            } else
+                                Util.showNoInternetDialog(con);
+                            return;
+                        }
+
+                        if (success == 0) {
+                            Toast.makeText(con, s, Toast.LENGTH_LONG).show();
+                        } else if (success == 1) {
+
+                            SharedPreferences.Editor edit = sh.edit();
+                            edit.putString("loginemail", email);
+                            edit.putString("loginpass", password);
+                            edit.putBoolean("type", driver);
+                            edit.putString("name", UserInfo.getName());
+                            edit.putString("id", UserInfo.getId());
+                            edit.putInt("group_id", group_id);
+                            edit.commit();
+
+                            Intent i = new Intent(con, DriverPositionActivity.class);
+                            if (driver)
+                            {    i = new Intent(con, DriverMapActivity.class);}
+
+
+
                             startActivity(i);
                             Toast.makeText(con, s, Toast.LENGTH_SHORT).show();
                             finish();

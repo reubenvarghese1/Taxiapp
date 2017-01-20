@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/round_blue_button.xml",
-        "source": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/src/main/res/drawable-mdpi/round_blue_button.xml"
+        "merged": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/round_blue_button.xml",
+        "source": "/home/reubenvarghese1/please_god/Taxiapp/app/src/main/res/drawable-mdpi/round_blue_button.xml"
     },
     {
-        "merged": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/round_edit.xml",
-        "source": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/src/main/res/drawable-mdpi/round_edit.xml"
+        "merged": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/without_stroke_edit_txt.xml",
+        "source": "/home/reubenvarghese1/please_god/Taxiapp/app/src/main/res/drawable-mdpi/without_stroke_edit_txt.xml"
     },
     {
-        "merged": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/without_stroke_edit_txt.xml",
-        "source": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/src/main/res/drawable-mdpi/without_stroke_edit_txt.xml"
+        "merged": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/rdo_step.xml",
+        "source": "/home/reubenvarghese1/please_god/Taxiapp/app/src/main/res/drawable-mdpi/rdo_step.xml"
     },
     {
-        "merged": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/rdo_step.xml",
-        "source": "/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/src/main/res/drawable-mdpi/rdo_step.xml"
+        "merged": "/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/round_edit.xml",
+        "source": "/home/reubenvarghese1/please_god/Taxiapp/app/src/main/res/drawable-mdpi/round_edit.xml"
     }
 ]

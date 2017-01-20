@@ -5,49 +5,45 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="19735136415194"
-    token="-2082215305191973705"
+    timestamp="127976800020318"
+    token="3934922872238472693"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="987" />
+        duration="882" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="78" />
+        duration="116" />
     <task
         name="verifier"
-        duration="3" />
+        duration="4" />
 
     <artifact
-        location="/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+        location="/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
         type="DEX" />
 
     <build
-        timestamp="17439563595627"
+        timestamp="122657524393979"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/outputs/apk/app-debug.apk"
+            location="/home/reubenvarghese1/please_god/Taxiapp/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="19300755425386"
+        timestamp="127976800020318"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
-            type="DEX" />
+            location="/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
         <artifact
-            location="/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="19735136415194"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/reubenvarghese1/droid_apps/TaxiCycloneApp14122016v2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            location="/home/reubenvarghese1/please_god/Taxiapp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
             type="DEX" />
     </build>
 
